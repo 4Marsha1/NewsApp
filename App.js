@@ -5,6 +5,7 @@ import Login from './screens/Login';
 import Home from './screens/Home';
 import store from "./redux/store"
 import Details from './screens/Details';
+import MyModal from './components/Modal';
 
 const Stack = createStackNavigator();
 
@@ -13,9 +14,10 @@ export default function App() {
         <Provider store={store}>
             <NavigationContainer>
                 <Stack.Navigator>
-                    {/* <Stack.Screen name="Login" component={Login} /> */}
+                    <Stack.Screen name="Login" component={Login} />
                     <Stack.Screen name="Home" component={Home} />
                     <Stack.Screen name="Details" component={Details} />
+                    <Stack.Screen name="Modal" component={MyModal} />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>

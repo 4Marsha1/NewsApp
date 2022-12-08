@@ -5,7 +5,7 @@ import NewsDetailsCard from '../components/NewsDetailsCard';
 
 const Details = ({ route }) => {
     const { article } = route.params;
-    console.log(article);
+
     return (
         <View style={styles.container}>
             <NewsCard article={article} />

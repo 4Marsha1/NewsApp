@@ -17,8 +17,10 @@ export const _retrieveData = async (key) => {
         if (value !== null) {
             // We have data!!
             console.log(value);
-        }
+            return true;
+        } else return false;
     } catch (error) {
         // Error retrieving data
+        return false;
     }
 };

@@ -75,13 +75,14 @@ const styles = StyleSheet.create({
         paddingVertical: 10
     },
     input: {
+        outline: 'none',
         backgroundColor: 'white',
         paddingVertical: 4,
         paddingHorizontal: 10,
         width: '80%',
         marginVertical: 4,
         borderBottomColor: '#E57B89',
-        borderBottomWidth: 2
+        borderBottomWidth: 2,
     },
     btn: {
         width: '30%',
