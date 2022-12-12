@@ -1,8 +1,9 @@
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux';
 import { useTheme } from "@react-navigation/native";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { login } from '../redux/actions/auth';
+import { _retrieveData } from '../utils';
 
 const Login = ({ navigation }) => {
     const { colors } = useTheme();
@@ -11,6 +12,13 @@ const Login = ({ navigation }) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    useEffect(() => {
+        if (_retrieveData('email')) {
+            navigation.navigate("Home")
+            return;
+        }
+    }, []);
 
     const loginUser = () => {
         if (!email || !password) {
